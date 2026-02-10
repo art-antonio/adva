@@ -1,0 +1,214 @@
+:root {
+  --adva-black: #11213d;
+  --adva-secondary: #16768f;
+  --adva-primary: #279fbf;
+  --adva-light: #fff;
+
+  --font-family: "Google Sans", sans-serif;
+  --french-blue: #1b427dff;
+  --blue-green: #4796bcff;
+  --platinum: #edf2f5ff;
+  --regal-navy: #133575ff;
+  --steel-azure: #1d4880ff;
+  --normal-text-1: 12px; /*(Small/Caption)*/
+  --normal-text-2: 14px;
+  --normal-text-3: 16px; /*(Base/Paragraph)*/
+  --heading-7: 18px; /*(Small Heading)*/
+  --heading-6: 20px; /*(H6)*/
+  --heading-5: 24px; /*(H5)*/
+  --heading-4: 28px; /*(H4)*/
+  --heading-3: 32px; /*(H3)*/
+  --heading-2: 36px; /*(H2)*/
+  --heading-1: 40px;
+  --heading-title: 48px;
+  --content-padding: 70px;
+}
+/* HARD RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  /* width: 100%;
+  height: 100%; */
+  font-family: var(--font-family);
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--adva-light);
+  top: 0;
+  width: 100%;
+  position: fixed;
+}
+
+.nav-objects {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-objects .hamburger {
+  padding: 10px;
+  display: none;
+}
+
+.logo {
+  padding: 10px;
+}
+
+.logo a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.logo-img {
+  max-width: 50px;
+}
+
+.nav-items .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  padding: 10px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--french-blue);
+  /* color: var(--adva-light); */
+  font-weight: 700;
+
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li:hover,
+.nav-links li a:hover {
+  background-color: var(--platinum);
+  color: var(--adva-secondary);
+  /* color: var(--adva-primary); */
+  font-weight: 700;
+}
+
+/* --- media query ---*/
+
+@media screen and (max-width: 758px) {
+  .nav-bar {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+  .nav-items {
+    width: 100%;
+  }
+  .nav-items .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+  .nav-links li {
+    width: 100%;
+  }
+  .nav-objects .hamburger {
+    display: block;
+  }
+}
+
+/* banner section */
+
+/* .banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  padding: var(--content-padding);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("image.jpg") center/cover no-repeat;
+  background-image: url(/images/office-supplies.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--platinum);
+} */
+
+.banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  padding: var(--content-padding);
+
+  /* single background shorthand */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("/images/office-supplies.jpg") center/cover no-repeat;
+
+  /* background-color: var(--platinum); fallback color */
+  color: white; /* optional for text visibility */
+}
+
+.banner__item {
+  flex-grow: 1;
+}
+
+.banner .title {
+  font-weight: 700;
+  color: var(--adva-light);
+  text-shadow: 0 0 1px rgba(23, 11, 11, 0.1);
+  font-size: var(--heading-title);
+}
+
+.adva__overview {
+  display: flex;
+  flex-direction: row;
+}
+
+.adva__overview__item {
+  padding: var(--content-padding);
+  flex: 1;
+  width: 100%;
+}
+
+.adva__overview__item:first-child {
+  background-color: var(--adva-primary);
+}
+
+.adva__overview__item:first-child h2 {
+  font-size: var(--heading-1);
+  color: var(--adva-light);
+}
+
+.adva__overview__item:last-child h2 {
+  font-size: var(--heading-1);
+  color: var(--adva-secondary);
+}
+
+@media screen and (max-width: 758px) {
+  .adva__overview {
+    flex-direction: column-reverse;
+  }
+  .adva__overview__item:first-child {
+    display: none;
+  }
+}
+
+.adva__services {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--adva-secondary);
+  gap: 10px;
+  padding: var(--content-padding);
+  color: var(--adva-light);
+}
