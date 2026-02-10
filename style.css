@@ -208,8 +208,17 @@ body {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
   background-color: var(--adva-secondary);
   gap: 10px;
   padding: var(--content-padding);
   color: var(--adva-light);
+}
+
+.adva__services__items {
+  border: 1px solid var(--adva-light);
+  border-radius: 10px;
+  padding: 10px;
 }
