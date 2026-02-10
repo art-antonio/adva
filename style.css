@@ -136,7 +136,7 @@ body {
   background:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("image.jpg") center/cover no-repeat;
-  background-image: url(https://art-antonio.github.io/adva/images/office-supplies.jpg);
+  background-image: url(./images/office-supplies.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--platinum);
@@ -152,7 +152,7 @@ body {
   /* single background shorthand */
   background:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("https://art-antonio.github.io/adva/images/office-supplies.jpg") center/cover no-repeat;
+    url(https://art-antonio.github.io/adva/images/office-supplies.jpg) center/cover no-repeat;
 
   /* background-color: var(--platinum); fallback color */
   color: white; /* optional for text visibility */
