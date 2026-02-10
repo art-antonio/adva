@@ -166,7 +166,7 @@ body {
 .banner .title {
   font-weight: 700;
   color: var(--adva-light);
-  text-shadow: 0 0 1px rgba(23, 11, 11, 0.1);
+  text-shadow: 0 0 1px rgba(11, 17, 23, 0.1);
   font-size: var(--heading-title);
 }
 
