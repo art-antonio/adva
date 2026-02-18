@@ -1,0 +1,436 @@
+:root {
+  --adva-black: #11213d;
+  --adva-secondary: #16768f;
+  --adva-primary: #279fbf;
+  --adva-light: #fff;
+  --adva-beige: #f5f5dc;
+
+  --adva-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  --adva-border-light: #d3d3d3;
+
+  --adva-primary-95: #eaf7fb;
+  --adva-primary-90: #d5eff6;
+  --adva-primary-80: #aadfee;
+  --adva-primary-70: #80cfe5;
+  --adva-primary-60: #56bfdc;
+  --adva-primary-50: #2bafd4;
+
+  --adva-secondary-32: #16768f;
+  --adva-secondary-30: #156e84;
+  --adva-secondary-25: #115c6e;
+  --adva-secondary-20: #0e4958;
+  --services-border: linear-gradient(
+    to right,
+    rgba(43, 175, 212, 1) 0%,
+    rgba(17, 92, 110, 1) 50%
+  );
+  --content-padding: 2rem;
+  --primary-font: "Google Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid coral; */
+}
+
+body {
+  font-family: var(--primary-font);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+  /* padding: 1rem; */
+  /* background:
+    linear-gradient(rgba(39, 159, 191, 0.2), rgba(39, 159, 191, 0.2)),
+    url("/images/office-supplies.jpg") top / cover no-repeat; */
+}
+
+.container {
+  width: 100%;
+  padding: 3rem;
+}
+
+.container-768 {
+  width: 768px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation Bar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* box-shadow: var(--adva-shadow); */
+  border-color: var(--adva-border-light);
+  padding: 10px 18px;
+  background-color: var(--adva-light);
+  /* background-color: var(--adva-secondary-20); */
+  /* top: 0;
+  width: 100%;
+  position: fixed; */
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
+}
+
+.menu .hamburger {
+  fill: var(--adva-primary);
+  width: 40px;
+  height: 40px;
+  display: none;
+}
+
+.menu .hamburger:hover {
+  fill: var(--adva-secondary);
+}
+
+.menu .logo {
+  fill: var(--adva-primary);
+  width: 50px;
+  height: 40px;
+}
+
+.menu .logo:hover {
+  fill: var(--adva-secondary);
+}
+
+.menu .logo-link {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  color: var(--adva-primary);
+  padding: 12px 10px;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  color: var(--adva-primary);
+}
+.menu .hamburger:hover,
+.menu .logo-link:hover,
+.navbar-links li a:hover {
+  color: var(--adva-secondary);
+  background-color: var(--adva-primary-95);
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .menu .hamburger {
+    display: block;
+  }
+
+  .menu .logo {
+    display: none;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    /* display: none; */
+    width: 100%;
+  }
+
+  .navbar-links li,
+  .navbar-links li a {
+    width: 100%;
+  }
+}
+
+/* banner */
+
+.banner {
+  font-family: "Google Sans", sans-serif;
+  /* background-color: #003d00; */
+  background-color: var(--adva-secondary-20);
+  padding: 1rem;
+  height: 90vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .adva-badge-btn {
+  /* background-color: beige; */
+  background-color: var(--adva-primary-95);
+  border-radius: 1rem;
+  /* color: #003d00; */
+  color: var(--adva-secondary);
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.banner .adva-badge-btn:hover {
+  outline: 3px solid var(--adva-light);
+  background-color: var(--adva-secondary);
+  font-weight: 700;
+  color: var(--adva-light);
+}
+
+.adva-badge-arrow {
+  fill: var(--adva-light);
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  /* background-color: #007200; */
+  background-color: var(--adva-secondary);
+}
+
+.banner h1 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.banner p {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.banner hr {
+  border: none;
+  height: 1px;
+  width: 30%;
+  background-color: var(--adva-light);
+}
+
+.banner h1,
+.banner p {
+  color: var(--adva-light);
+}
+
+.banner-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.banner-options .contact-us-btn {
+  border: none;
+  display: flex;
+  padding: 0.3rem;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.3rem;
+  background: none;
+  color: var(--adva-light);
+  padding: 0.9rem 1rem;
+  border: 2px solid var(--adva-light);
+  box-shadow: 0 0 3px var(--adva-primary);
+  font-size: 1.2rem;
+}
+
+.banner-options .contact-us-btn:hover {
+  outline: 3px solid var(--adva-light);
+  background-color: var(--adva-secondary);
+  font-weight: 700;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  /* height: 100vh; */
+  padding: var(--content-padding);
+  background-color: var(--adva-light);
+  line-height: 1.5rem;
+  /* column-gap: 3rem;*/
+}
+
+.services .why-adva {
+  color: var(--adva-secondary-25);
+  /* font-size: 2.5rem; */
+  font-size: 1.2rem;
+  font-weight: 700;
+  /* text-decoration: underline 2px;*/
+  /* line-height: 1.6rem; */
+}
+
+.services .services-pitch {
+  color: var(--adva-secondary-25);
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  /* text-decoration: underline 2px;
+  line-height: 3px; */
+}
+
+.services-label {
+  color: var(--adva-secondary-25);
+  font-size: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.services-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  padding: 1rem;
+  line-height: 1.5rem;
+  gap: 1rem;
+}
+
+.services .services-icons {
+  width: 5rem;
+  padding: 10px;
+  fill: var(--adva-secondary-25);
+  background-color: var(--adva-primary-90);
+  border-radius: 5rem;
+  /* box-shadow: 0 0 8px var(--adva-secondary-32); */
+}
+
+.services-items .services-item {
+  background-color: var(--adva-primary-95);
+  padding: 1.2rem;
+  border: linear;
+  border-radius: 1rem;
+  line-height: 1.6rem;
+  flex: 1;
+}
+
+.services-items .services-item h2 {
+  color: var(--adva-secondary-25);
+}
+
+.services-items .services-expertise {
+  padding-left: 1rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .services-items {
+    flex-direction: column;
+    padding: 0;
+    flex: 0;
+    width: 100%;
+  }
+}
+
+/* Contacts */
+.contact {
+  display: flex;
+  justify-content: left;
+  align-items: stretch;
+  /* padding: var(--content-padding); */
+  background-color: var(--adva-primary-95);
+}
+
+.contact .contact-items {
+  flex: 1;
+  padding: var(--content-padding);
+}
+
+.contact .contact-items:first-child h2 {
+  color: var(--adva-secondary-25);
+  font-size: 2.5rem;
+}
+
+.contact .contact-items:first-child p {
+  color: var(--adva-secondary-25);
+  font-weight: 400;
+}
+
+.contact .contact-items:last-child {
+  /* background-color: var(--adva-primary); */
+}
+
+.contact-items:last-child h2 {
+  /* color: var(--adva-light); */
+  color: var(--adva-secondary-25);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 1rem;
+}
+
+.contact-form .contact-name {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.contact-form .contact-name input {
+  flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: var(--adva-light);
+  padding: 0.8rem 1rem;
+  outline: none;
+  border: 1px solid var(--adva-secondary);
+  /* border: none; */
+  border-radius: 3px;
+
+  font-family: var(--primary-font);
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 5px var(--adva-primary-70);
+}
+
+.contact-form .contact-form-submit {
+  background-color: var(--adva-secondary);
+  color: var(--adva-light);
+  font-weight: 700;
+  /* font-size: 1.1rem; */
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+  }
+  .contact-form .contact-name {
+    flex-direction: column;
+  }
+}
