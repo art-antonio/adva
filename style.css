@@ -370,9 +370,9 @@ body {
   font-weight: 400;
 }
 
-.contact .contact-items:last-child {
-  /* background-color: var(--adva-primary); */
-}
+/* .contact .contact-items:last-child {
+  background-color: var(--adva-primary);
+} */
 
 .contact-items:last-child h2 {
   /* color: var(--adva-light); */
