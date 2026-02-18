@@ -370,9 +370,9 @@ body {
   font-weight: 400;
 }
 
-/* .contact .contact-items:last-child {
-  background-color: var(--adva-primary);
-} */
+.contact .contact-items:last-child {
+  /* background-color: var(--adva-primary); */
+}
 
 .contact-items:last-child h2 {
   /* color: var(--adva-light); */
@@ -484,7 +484,7 @@ body {
   gap: 1rem;
 }
 
-.footer-item ul li {
+.footer ul li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -492,10 +492,6 @@ body {
   width: 2.4rem;
   height: 2.4rem;
   border-radius: 3rem;
-}
-
-.footer-item ul li:hover {
-  color: var(--adva-primary);
 }
 
 .fa-brands {
